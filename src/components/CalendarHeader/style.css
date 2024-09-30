@@ -1,0 +1,28 @@
+.month-header {
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  vertical-align: middle;
+  align-items: center;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-bottom: 2px solid #aeaeae;
+}
+
+.month-header > span {
+  cursor: pointer;
+  font-size: 2em;
+}
+
+.month-header > h1 {
+  text-align: center;
+  font-weight: 100;
+}
+
+.month-header > span:last-child {
+  text-align: right;
+}
+
+.month-header > span:hover {
+  opacity: 0.5;
+}
