@@ -5,7 +5,7 @@ import CalendarHeader from "../../components/CalendarHeader";
 import Weekdays from "../../components/Weekdays";
 import CalendarCells from "../../components/CalendarCells";
 
-import useDates from "../../hooks/useCells";
+import useCells from "../../hooks/useCells";
 import useEvents from "../../hooks/useEvents";
 import {
   getCurrentYearMonth,
@@ -25,7 +25,7 @@ const Calendar: React.FC = () => {
   const year = Number(yearParam);
   const month = Number(monthParam);
 
-  const { cells } = useDates(year, month);
+  const { cells } = useCells(year, month);
   const { events, isLoading, error } = useEvents();
 
   const handleNavigation = (months: number) => {

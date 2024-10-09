@@ -24,31 +24,25 @@ const CalendarEvent: React.FC<CalendarEventProps> = ({
           : undefined,
       }}
     >
-      {isExpanded && (
-        <>
-          <h3>{title}</h3>
-          <p dangerouslySetInnerHTML={{ __html: summary }} />
-          <div className="available-date">
-            Available {getFullDateName(date)}
-          </div>
-          <a
-            href={learnMoreLink}
-            target="_blank"
-            className="action-btn learn-more"
-            rel="noopener noreferrer"
-          >
-            Learn More
-          </a>
-          <a
-            href={purchaseLink}
-            target="_blank"
-            className="action-btn pre-order"
-            rel="noopener noreferrer"
-          >
-            Pre Order Now
-          </a>
-        </>
-      )}
+      <h3>{title}</h3>
+      <p dangerouslySetInnerHTML={{ __html: summary }} />
+      <div className="available-date">Available {getFullDateName(date)}</div>
+      <a
+        href={learnMoreLink}
+        target="_blank"
+        className="action-btn learn-more"
+        rel="noopener noreferrer"
+      >
+        Learn More
+      </a>
+      <a
+        href={purchaseLink}
+        target="_blank"
+        className="action-btn pre-order"
+        rel="noopener noreferrer"
+      >
+        Pre Order Now
+      </a>
     </div>
   );
 };
